@@ -1,9 +1,9 @@
 package main.java;
 
 public class Program {
-	
 	public static void main(String [] args)
 	{
-		System.out.println("Hello World");
+		PersonProgram personProgram = new PersonProgram();
+		personProgram.execute();
 	}
 }
