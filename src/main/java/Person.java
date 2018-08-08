@@ -16,63 +16,46 @@ package main.java;
 public class Person {
 
 	// DATA (owned by the instance of the class -- member variables)
-	private int height;
-	private int weight;
-	private String hairColor;
-	private String gender;
+	private String firstName;
+	private String middleInitial;
+	private String lastName;
 	
 	// CONSTRUCTOR (MANY CAN BE DEFINED, AS LONG AS PARAMETERS + TYPES ARE DIFFERENT)
-	public Person(int height, int weight, String hairColor, String gender) {
-		this.setHeight(height);
-		this.setWeight(weight);
-		this.setHairColor(hairColor);
-		this.setGender(gender);
+	public Person(String firstName, String middleInitial, String lastName) {
+		this.setFirstName(firstName);
+		this.setMiddleInitial(middleInitial);
+		this.setLastName(lastName);
 	}
 	
-	public Person(int weight) {
-		this.setWeight(weight);
-	}
-	
-	public Person(int weight, String hairColor, String gender){
-		this.setWeight(weight);
-		this.setHairColor(hairColor);
-		this.setGender(gender);
-	}
+
 	// need to define default constructor if you define a constructor and still want the default
 	public Person() { }
 	
 
 	// MUTATOR (ALLOWS MODIFICATION OF PRIVATE DATA)
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	
 	// ACCESSOR (ALLOWS ACCESS TO PRIVATE DATA)
-	public String getGender(){
-		return this.gender;
+	public String getFirstName(){
+		return this.firstName;
 	}
 
-	public void setHairColor(String hairColor) {
-		this.hairColor = hairColor;
+	public void setMiddleInitial(String middleInitial) {
+		this.middleInitial = middleInitial;
 	}
 
-	public String getHairColor() {
-		return this.hairColor;
+	public String getMiddleInitial() {
+		return this.middleInitial;
 	}
 
-	public int getHeight() {
-		return height;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setHeight(int height) {
-		this.height = height;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public int getWeight() {
-		return weight;
-	}
-
-	public void setWeight(int weight) {
-		this.weight = weight;
-	}
 }
