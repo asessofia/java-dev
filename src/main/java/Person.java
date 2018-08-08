@@ -6,11 +6,20 @@ public class Person {
 	private int height;
 	private int weight;
 	private String hairColor;
+	private String gender;
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	
+	public String getGender(){
+		return this.gender;
+	}
+
 	public void setHairColor(String hairColor) {
 		this.hairColor = hairColor;
 	}
-	
+
 	public String getHairColor() {
 		return this.hairColor;
 	}

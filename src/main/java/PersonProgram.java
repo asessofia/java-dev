@@ -14,5 +14,8 @@ public class PersonProgram extends MiniProgram {
 		
 		personObject.setHairColor("Blue");
 		System.out.println("Person Hair Color: " + personObject.getHairColor());
+		
+		personObject.setGender("female");
+		System.out.println("Gender: " + personObject.getGender());
 	}
 }
