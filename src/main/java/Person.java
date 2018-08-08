@@ -33,6 +33,11 @@ public class Person {
 		this.setWeight(weight);
 	}
 	
+	public Person(int weight, String hairColor, String gender){
+		this.setWeight(weight);
+		this.setHairColor(hairColor);
+		this.setGender(gender);
+	}
 	// need to define default constructor if you define a constructor and still want the default
 	public Person() { }
 	
