@@ -2,6 +2,14 @@ package main.java;
 
 public class PersonProgram extends MiniProgram {
 	
+	public void outputPerson(Person person) {
+		this.outputField("Person Height", person.getHeight());
+		this.outputField("Person Weight", person.getWeight());
+		this.outputField("Person Hair Color", person.getHairColor());
+		this.outputField("Gender", person.getGender());
+		System.out.println("");
+	}
+	
 	@Override
 	public void execute() {
 		Person personObject = new Person();
@@ -9,13 +17,12 @@ public class PersonProgram extends MiniProgram {
 		int y = 250;
 		personObject.setHeight(x);
 		personObject.setWeight(y);
-		System.out.println("Person Height: " + personObject.getHeight());
-		System.out.println("Person Weight: " + personObject.getWeight());
-		
 		personObject.setHairColor("Blue");
-		System.out.println("Person Hair Color: " + personObject.getHairColor());
-		
 		personObject.setGender("female");
-		System.out.println("Gender: " + personObject.getGender());
+		
+		this.outputPerson(personObject);
+		
+		Person personObject2 = new Person(175, 250, "Green", "Martian");
+		this.outputPerson(personObject2);
 	}
 }
