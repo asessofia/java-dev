@@ -1,5 +1,18 @@
 package main.java;
 
+/*
+ * ASSIGNMENT 1:
+ * 
+ *  A> Create a class called "PersonInfo" with field names for first name, middle initial, and last name with accessors and mutators
+ *  Follow java conventions:
+ *  	1. (lowerCamelCased for data, method names, method parameters, and variable declarations)
+ * 		2. (UpperCamelCased for class names)
+ * 
+ *  B> Add PersonInfo as a data member in the Person class.  Create accessors and mutators.
+ *  C> Create a constructor in the Person object that takes PersonInfo as a parameter.  
+ *  D> Use the PersonProgram to output the person info along with all the other fields
+ */
+
 public class Person {
 
 	// DATA (owned by the instance of the class -- member variables)
