@@ -1,5 +1,6 @@
 package main.java;
 import main.java.people.Female;
+import main.java.people.Male;
 
 public class PersonProgram extends MiniProgram {
 
@@ -74,5 +75,9 @@ public class PersonProgram extends MiniProgram {
 		
 		Female female = new Female("Ann", "C", "Coulter");
 		this.outputPerson(female);
+		
+		//int height, int weight, String hairColor, PersonInfo personInfo
+		Male male = new Male(6, 200, "dark", new PersonInfo("Matthew", "W", "Mills"));
+		this.outputPerson(male);
 	}
 }
