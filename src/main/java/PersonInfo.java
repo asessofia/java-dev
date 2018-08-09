@@ -27,6 +27,11 @@ public class PersonInfo {
 		this.setLastName(lastName);
 	}
 	
+	public PersonInfo(String firstName, String lastName) {
+		this.setFirstName(firstName);
+		this.setLastName(lastName);
+	}
+	
 
 	// need to define default constructor if you define a constructor and still want the default
 	public PersonInfo() { }

@@ -2,7 +2,7 @@ package main.java;
 
 public class PersonProgram extends MiniProgram {
 
-	public void outputPerson(PersonInfo person) {
+	public void outputPersonInfo(PersonInfo person) {
 
 		this.outputField("Person's First Name", person.getFirstName());
 		this.outputField("Person's Middle Initial", person.getMiddleInitial());
@@ -10,22 +10,62 @@ public class PersonProgram extends MiniProgram {
 		System.out.println("");
 	}
 
+	public void outputPerson(Person person) {
+		if (person.getHeight() != 0) {
+			this.outputField("Height", person.getHeight());
+		}
+
+		if (person.getWeight() != 0) {
+			this.outputField("Weight", person.getWeight());
+		}
+
+		if (person.getHairColor() != null) {
+			this.outputField("Hair Color", person.getHairColor());
+		}
+
+		if (person.getGender() != null) {
+			this.outputField("Gender", person.getGender());
+		}
+		
+		if (person.getPersonInfo() != null) {
+			this.outputPersonInfo(person.getPersonInfo());
+		}
+
+		System.out.println("");
+	}
+
 	@Override
 	public void execute() {
-		PersonInfo personObject = new PersonInfo();
+		
+		
+		PersonInfo personInfoObject = new PersonInfo();
 		String x = "John";
 		String y = "A";
 		String Z = "Smith";
-		personObject.setFirstName(x);
-		personObject.setMiddleInitial(y);
-		personObject.setLastName("Smith");
+		personInfoObject.setFirstName(x);
+		personInfoObject.setMiddleInitial(y);
+		personInfoObject.setLastName(Z);
+		
+		Person person = new Person();
+		person.setHeight(250);
+		person.setWeight(250);
+		person.setHairColor("Blue");
+		person.setGender("Male");
+		
+		Person person1 = new Person(250, 125, "Green", "Martian", personInfoObject);
+		Person person2 = new Person(125, "Orange", "Female", "Jim", "Thorton");
+		
+		outputPerson(person);
+		outputPerson(person1);
+		outputPerson(person2);
 
-		this.outputPerson(personObject);
 
-		PersonInfo personObject2 = new PersonInfo("Jon", "A", "Howard");
-		this.outputPerson(personObject2);
+		this.outputPersonInfo(personInfoObject);
 
-		PersonInfo personObject3 = new PersonInfo("Jane", "C", "Doe");
-		this.outputPerson(personObject3);
+		PersonInfo personInfoObject2 = new PersonInfo("Jon", "A", "Howard");
+		this.outputPersonInfo(personInfoObject2);
+
+		PersonInfo personInfoObject3 = new PersonInfo("Jane", "C", "Doe");
+		this.outputPersonInfo(personInfoObject3);
 	}
 }
