@@ -26,6 +26,11 @@ public class Person {
 		this.setGender(gender);
 		this.setPersonInfo(new PersonInfo(firstName, lastName));
 	}
+	
+	public Person(String firstName, String middleInitial, String lastName) {
+		this.setPersonInfo(new PersonInfo(firstName, middleInitial, lastName));
+	}
+
 
 	public int getHeight() {
 		return height;

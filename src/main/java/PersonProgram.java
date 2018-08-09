@@ -52,12 +52,15 @@ public class PersonProgram extends MiniProgram {
 		person.setHairColor("Blue");
 		person.setGender("Male");
 		
+		
 		Person person1 = new Person(250, 125, "Green", "Martian", personInfoObject);
 		Person person2 = new Person(125, "Orange", "Female", "Jim", "Thorton");
+		Person person4 = new Person("Alex", "B", "Max");
 		
 		outputPerson(person);
 		outputPerson(person1);
 		outputPerson(person2);
+		outputPerson(person4);
 
 
 		this.outputPersonInfo(personInfoObject);
