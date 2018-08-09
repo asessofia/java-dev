@@ -2,7 +2,7 @@ package main.java;
 
 public class PersonProgram extends MiniProgram {
 
-	public void outputPerson(Person person) {
+	public void outputPerson(PersonInfo person) {
 
 		this.outputField("Person's First Name", person.getFirstName());
 		this.outputField("Person's Middle Initial", person.getMiddleInitial());
@@ -12,7 +12,7 @@ public class PersonProgram extends MiniProgram {
 
 	@Override
 	public void execute() {
-		Person personObject = new Person();
+		PersonInfo personObject = new PersonInfo();
 		String x = "John";
 		String y = "A";
 		String Z = "Smith";
@@ -22,10 +22,10 @@ public class PersonProgram extends MiniProgram {
 
 		this.outputPerson(personObject);
 
-		Person personObject2 = new Person("Jon", "A", "Howard");
+		PersonInfo personObject2 = new PersonInfo("Jon", "A", "Howard");
 		this.outputPerson(personObject2);
 
-		Person personObject3 = new Person("Jane", "C", "Doe");
+		PersonInfo personObject3 = new PersonInfo("Jane", "C", "Doe");
 		this.outputPerson(personObject3);
 	}
 }

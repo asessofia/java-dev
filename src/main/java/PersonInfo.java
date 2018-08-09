@@ -13,7 +13,7 @@ package main.java;
  *  D> Use the PersonProgram to output the person info along with all the other fields
  */
 
-public class Person {
+public class PersonInfo {
 
 	// DATA (owned by the instance of the class -- member variables)
 	private String firstName;
@@ -21,7 +21,7 @@ public class Person {
 	private String lastName;
 	
 	// CONSTRUCTOR (MANY CAN BE DEFINED, AS LONG AS PARAMETERS + TYPES ARE DIFFERENT)
-	public Person(String firstName, String middleInitial, String lastName) {
+	public PersonInfo(String firstName, String middleInitial, String lastName) {
 		this.setFirstName(firstName);
 		this.setMiddleInitial(middleInitial);
 		this.setLastName(lastName);
@@ -29,7 +29,7 @@ public class Person {
 	
 
 	// need to define default constructor if you define a constructor and still want the default
-	public Person() { }
+	public PersonInfo() { }
 	
 
 	// MUTATOR (ALLOWS MODIFICATION OF PRIVATE DATA)
