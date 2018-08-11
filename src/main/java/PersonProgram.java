@@ -1,6 +1,7 @@
 package main.java;
 import main.java.people.Female;
 import main.java.people.Male;
+import main.java.people.boxers.MaleBoxer;
 
 public class PersonProgram extends MiniProgram {
 
@@ -79,5 +80,26 @@ public class PersonProgram extends MiniProgram {
 		//int height, int weight, String hairColor, PersonInfo personInfo
 		Male male = new Male(6, 200, "dark", new PersonInfo("Matthew", "W", "Mills"));
 		this.outputPerson(male);
+		
+		// TASK 4: Create a few male boxer objects of varying weight classes
+		// TASK 5: Output the person + the weightclass using an additional method, "outputMaleBoxer"
+		//		Note: You should call this.outputPerson(...) on the male boxer object before outputting the weight class
+		
+		// example:
+		
+		// given:
+		MaleBoxer boxer = new MaleBoxer(100, 128, "Dark Brown", new PersonInfo("Jeff", "C", "Gordon"));
+		// and calling this.outputBoxer(boxer);
+		
+		// should produce:
+		
+//		Height: 100
+//		Weight: 129
+//		Hair Color: Dark Brown
+//		Gender: Male
+//		Person's First Name: Jeff
+//		Person's Middle Initial: C
+//		Person's Last Name: Gordon
+//		Weight Class: Lightweight
 	}
 }
