@@ -1,4 +1,5 @@
 package main.java;
+
 import main.java.people.Female;
 import main.java.people.Male;
 import main.java.people.boxers.MaleBoxer;
@@ -29,7 +30,7 @@ public class PersonProgram extends MiniProgram {
 		if (person.getGender() != null) {
 			this.outputField("Gender", person.getGender());
 		}
-		
+
 		if (person.getPersonInfo() != null) {
 			this.outputPersonInfo(person.getPersonInfo());
 		}
@@ -37,10 +38,15 @@ public class PersonProgram extends MiniProgram {
 		System.out.println("");
 	}
 
+	public void outputMaleBoxer(MaleBoxer maleboxer) {
+		this.outputPerson(maleboxer);
+		this.outputField("weightclass", maleboxer.getWeightClass());
+
+	}
+
 	@Override
 	public void execute() {
-		
-		
+
 		PersonInfo personInfoObject = new PersonInfo();
 		String x = "John";
 		String y = "A";
@@ -48,23 +54,21 @@ public class PersonProgram extends MiniProgram {
 		personInfoObject.setFirstName(x);
 		personInfoObject.setMiddleInitial(y);
 		personInfoObject.setLastName(Z);
-		
+
 		Person person = new Person();
 		person.setHeight(250);
 		person.setWeight(250);
 		person.setHairColor("Blue");
 		person.setGender("Male");
-		
-		
+
 		Person person1 = new Person(250, 125, "Green", "Martian", personInfoObject);
 		Person person2 = new Person(125, "Orange", "Female", "Jim", "Thorton");
 		Person person4 = new Person("Alex", "B", "Max");
-		
+
 		outputPerson(person);
 		outputPerson(person1);
 		outputPerson(person2);
 		outputPerson(person4);
-
 
 		this.outputPersonInfo(personInfoObject);
 
@@ -73,33 +77,43 @@ public class PersonProgram extends MiniProgram {
 
 		PersonInfo personInfoObject3 = new PersonInfo("Jane", "C", "Doe");
 		this.outputPersonInfo(personInfoObject3);
-		
+
 		Female female = new Female("Ann", "C", "Coulter");
 		this.outputPerson(female);
-		
-		//int height, int weight, String hairColor, PersonInfo personInfo
+
+		// int height, int weight, String hairColor, PersonInfo personInfo
 		Male male = new Male(6, 200, "dark", new PersonInfo("Matthew", "W", "Mills"));
 		this.outputPerson(male);
-		
-		// TASK 4: Create a few male boxer objects of varying weight classes
-		// TASK 5: Output the person + the weightclass using an additional method, "outputMaleBoxer"
-		//		Note: You should call this.outputPerson(...) on the male boxer object before outputting the weight class
-		
+
+		// TASK 4: Create a few male boxer objects of varying weight classe
+
+		MaleBoxer maleboxer1 = new MaleBoxer(100, 129, "Dark Brown", new PersonInfo("Jeff", "C", "Gordon"));
+		MaleBoxer maleboxer2 = new MaleBoxer(250, "Dark", "Martian", "Jane");
+		MaleBoxer maleboxer3 = new MaleBoxer(200, new PersonInfo("Smith", "B", "Allen"));
+		this.outputMaleBoxer(maleboxer1);
+		this.outputMaleBoxer(maleboxer2);
+		this.outputMaleBoxer(maleboxer3);
+
+		// TASK 5: Output the person + the weightclass using an additional
+		// method, "outputMaleBoxer"
+		// Note: You should call this.outputPerson(...) on the male boxer object
+		// before outputting the weight class
+
 		// example:
-		
-		// given:
-		MaleBoxer boxer = new MaleBoxer(100, 128, "Dark Brown", new PersonInfo("Jeff", "C", "Gordon"));
+
+		// given: MaleBoxer boxer = new MaleBoxer(100, 128, "Dark Brown", new
+		// PersonInfo("Jeff", "C", "Gordon"));
 		// and calling this.outputBoxer(boxer);
-		
+
 		// should produce:
-		
-//		Height: 100
-//		Weight: 129
-//		Hair Color: Dark Brown
-//		Gender: Male
-//		Person's First Name: Jeff
-//		Person's Middle Initial: C
-//		Person's Last Name: Gordon
-//		Weight Class: Lightweight
+
+		// Height: 100
+		// Weight: 129
+		// Hair Color: Dark Brown
+		// Gender: Male
+		// Person's First Name: Jeff
+		// Person's Middle Initial: C
+		// Person's Last Name: Gordon
+		// Weight Class: Lightweight
 	}
 }
