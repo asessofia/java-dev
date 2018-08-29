@@ -20,18 +20,14 @@ public class Stack {
 	
 	public void push(String item) {
 		// TODO: IMPLEMENT PUSH
-		if (item ==Stack)
-		{
-			extendStack();
-		}
-			stack[top]=1
-		
+		this.data[topLevel] = item;
+		++this.topLevel;
 	}
 	
 	public String top() {
 		// TODO: IMPLEMENT TOP
-		if (this.topLevel==0)
-		return null; // STUB
+		return data[topLevel-1];// STUB
+		
 	}
 
 }
