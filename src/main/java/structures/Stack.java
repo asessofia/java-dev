@@ -10,6 +10,10 @@ public class Stack {
 
 	private void resize() {
 		// Implement Parts 1.2 & 2 of algorithm here.
+		String[] NewData = new String[maxSize *2];
+		data = NewData;
+		
+		NewData[0] = this.data[0];
 
 		// increase max size to twice size
 		this.maxSize *= 2;
