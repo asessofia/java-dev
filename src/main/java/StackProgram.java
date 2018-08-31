@@ -12,6 +12,14 @@ public class StackProgram extends MiniProgram {
 		output("Stack Empty: ", s.isEmpty());
 	}
 
+	private void outputStackInReverse(Stack stack) {
+		for (Integer i = 10; i >= 0; i--) {
+			output("Size of Stack", stack.size());
+			output("Top of the Stack", stack.top());
+			stack.pop();
+		}
+	}
+
 	@Override
 	public void execute() {
 		System.out.println("EXECUTING STACK PROGRAM\n");
@@ -24,16 +32,12 @@ public class StackProgram extends MiniProgram {
 			stack.push(i.toString());
 		}
 
-		// Step 2: Test if stack is empty
 		testStackEmpty(stack);
-
-		// Step 3: Print the stack in reverse.
-		for (Integer i = 10; i >= 0; i--) {
-			output("Top of the Stack", stack.top());
-
-			stack.pop();
-
-		}
+		outputStackInReverse(stack);
+		testStackEmpty(stack); // <- Before assignment returns true.. after returns false
+		
+		// Assignment: Modify outputStackInReverse to output the stack WITHOUT modifying its size
+		// hint: use two stacks and think about copying back and forth to keep original stack restored after the printing is done
 
 	}
 

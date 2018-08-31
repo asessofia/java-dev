@@ -55,5 +55,9 @@ public class Stack {
 	public boolean isEmpty() {
 		return topLevel == 0;
 	}
+	
+	public Integer size() {
+		return this.topLevel;
+	}
 
 }
