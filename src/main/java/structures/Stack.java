@@ -10,14 +10,13 @@ public class Stack {
 
 	private void resize() {
 		// Implement Parts 1.2 & 2 of algorithm here.
-		String[] NewData = new String[maxSize *2];
-		
-		for (int i = 0 ; i < maxSize ; i++)
-		{
+		String[] NewData = new String[maxSize * 2];
+
+		for (int i = 0; i < maxSize; i++) {
 			NewData[i] = this.data[i];
-			
+
 		}
-		
+
 		data = NewData;
 
 		// increase max size to twice size
@@ -45,8 +44,16 @@ public class Stack {
 	}
 
 	public String top() {
-		return data[topLevel - 1];
+		if (topLevel != 0) {
+			return data[topLevel - 1];	
+		} else {
+			return null;
+		}
 
+	}
+	
+	public boolean isEmpty() {
+		return topLevel == 0;
 	}
 
 }
